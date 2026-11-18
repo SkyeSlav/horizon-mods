@@ -1,0 +1,44 @@
+id = "autologin"
+
+kind = "native-mod"
+
+name = "Auto Login"
+
+summary = "Detects login/register prompts in chat and logs you in or registers you, per server."
+
+description = """
+Auto Login watches the chat for login and register prompts and acts on them: when the server asks you to log in, it sends /login with the password saved for that server and player; when the server asks you to register and no password is saved, it generates a random password, sends /register, and saves it for next time.
+
+Manual commands /autologin and /autoregister do the same on demand, and /autologin set, pattern, delay, toggle and status configure it without rebuilding.
+
+Passwords are stored in plain text on the device, one line per server, in the mod's own data files — use a password made just for that server."""
+
+authors = ["SkyeSlav"]
+
+owners = ["SkyeSlav"]
+
+owner_ids = [13040310]
+
+license = "MIT"
+
+source = "https://github.com/SkyeSlav/horizon-autologin"
+
+icon = "icons/autologin.png"
+
+categories = ["utility", "management"]
+
+tags = ["login", "auto-login", "auth", "automation"]
+
+[[versions]]
+
+version = "1.1.0"
+
+published = "2026-11-18"
+
+game = "26.3"
+
+file = "autologin.hmod"
+
+sha256 = "15e6246678150388993eacab59eb7602460deb0a6f837b50c82de1d9ba19713b"
+
+changelog = "Native .hmod build for the Horizon launcher and registry — the same auto-login / auto-register behaviour as 1.0.0, rebuilt on the new mod API."
