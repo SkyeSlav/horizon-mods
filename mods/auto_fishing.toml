@@ -29,28 +29,14 @@ tags = ["fishing", "auto-fishing", "automation"]
 
 [[versions]]
 
-version = "1.0.0"
+version = "1.0.2"
 
-published = "2026-11-21"
-
-game = "26.3"
-
-file = "auto-fishing-1.0.0.hmod"
-
-sha256 = "ce072864c4a0d532cb6e6b49cfd5913b8d7e123c334868d20fccea6c027b7ad0"
-
-changelog = "First release: reels in on the bite's splash sound and casts again; /autofish is declared to the chat tree, so it colours and completes instead of showing red while typing."
-
-[[versions]]
-
-version = "1.0.1"
-
-published = "2026-11-21"
+published = "2026-11-22"
 
 game = "26.3"
 
-file = "auto-fishing-1.0.1.hmod"
+file = "auto-fishing-1.0.2.hmod"
 
-sha256 = "bce09d5c80e6e5a3e1c09483dff00ef59eefd1b10d719c7c40a43ed5c1ebc9cf"
+sha256 = "c730d7dadcdbedee4d555bdad1d26ae3a2c8f66d6cea374a8555769b4cb06888"
 
-changelog = "Bite detection now anchors on the bobber's landing splash: only a splash near where your bobber landed counts as a bite, so a nearby fisher's splash no longer reels your line. No bite is accepted in the first 100 ticks after the landing."
+changelog = "Bite detection now checks the splash against the cast itself — in range, in the cast direction, at least 100 ticks after the cast. 1.0.1's landing-splash anchor could never be set, since no landing splash exists, so it missed the bite. Also declares the MIT license."
