@@ -1,0 +1,42 @@
+id = "auto_fishing"
+
+kind = "native-mod"
+
+name = "Horizon Auto Fishing"
+
+summary = "Reels in when a fish bites and casts again, with break protection, inventory rod swapping and human-like delays."
+
+description = """
+Horizon Auto Fishing watches the bobber on a server and reels in on the bite, then casts again after the recast delay (default 17 ticks). You cast first by hand — the mod never casts on its own — and it takes over from there.
+
+Break protection keeps a rod from being used once 5 or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra so no two cycles are exactly alike, and an opt-in junk filter throws away only the items you list."""
+
+authors = ["SkyeSlav"]
+
+owners = ["SkyeSlav"]
+
+owner_ids = [13040310]
+
+license = "MIT"
+
+source = "https://github.com/SkyeSlav/horizon-auto-fishing"
+
+icon = "icons/auto_fishing.png"
+
+categories = ["utility", "game-mechanics"]
+
+tags = ["fishing", "auto-fishing", "automation"]
+
+[[versions]]
+
+version = "1.0.0"
+
+published = "2026-11-21"
+
+game = "26.3"
+
+file = "auto-fishing-1.0.0.hmod"
+
+sha256 = "ce072864c4a0d532cb6e6b49cfd5913b8d7e123c334868d20fccea6c027b7ad0"
+
+changelog = "First release: reels in on the bite's splash sound and casts again; /autofish is declared to the chat tree, so it colours and completes instead of showing red while typing."
