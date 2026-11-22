@@ -4,12 +4,14 @@ kind = "native-mod"
 
 name = "Horizon Auto Fishing"
 
-summary = "Reels in when a fish bites and casts again, with break protection, inventory rod swapping and human-like delays."
+summary = "Reels in when a fish bites and casts again, with break protection, inventory rod swapping and random delays."
 
 description = """
-Horizon Auto Fishing watches the bobber on a server and reels in on the bite, then casts again after the recast delay (default 17 ticks). You cast first by hand — the mod never casts on its own — and it takes over from there.
+Horizon Auto Fishing automates fishing input: it sends raw use_item packets to reel in on the bite and cast again, and uses inventory clicks to swap rods and throw away junk. You cast first by hand — the mod never casts on its own — and it takes over from there.
 
-Break protection keeps a rod from being used once 5 or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra so no two cycles are exactly alike, and an opt-in junk filter throws away only the items you list."""
+Many servers forbid AFK or automated fishing, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first.
+
+Break protection keeps a rod from being used once 5 or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra (up to 5 ticks by default). The opt-in junk filter throws away only the items you list — while it is on, it drops one listed item per tick, even when you are not fishing."""
 
 authors = ["SkyeSlav"]
 
@@ -29,14 +31,14 @@ tags = ["fishing", "auto-fishing", "automation"]
 
 [[versions]]
 
-version = "1.0.2"
+version = "1.0.3"
 
 published = "2026-11-22"
 
 game = "26.3"
 
-file = "auto-fishing-1.0.2.hmod"
+file = "auto-fishing-1.0.3.hmod"
 
-sha256 = "c730d7dadcdbedee4d555bdad1d26ae3a2c8f66d6cea374a8555769b4cb06888"
+sha256 = "4e78dbb3a47f919717ad441932de3f5e4e64f594c16036f372404683cd14f184"
 
-changelog = "Bite detection now checks the splash against the cast itself — in range, in the cast direction, at least 100 ticks after the cast. 1.0.1's landing-splash anchor could never be set, since no landing splash exists, so it missed the bite. Also declares the MIT license."
+changelog = "Ships the MIT LICENSE file inside the .hmod, fixes the version mismatch, and rewrites the description to disclose automated fishing input and the ban risk. Bite detection unchanged from 1.0.2."
