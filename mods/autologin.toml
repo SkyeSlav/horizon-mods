@@ -7,7 +7,7 @@ name = "Auto Login"
 summary = "Logs you in on join when a password is saved and consent is given, and watches for login/register prompts in chat, per server."
 
 description = """
-Auto Login logs you in on join when a password is saved for that server and player and you allowed it on that server — no prompt needed. When no password is saved, it watches for login and register prompts — in chat, in the action bar and on the boss bar — and acts on them: when the server asks you to register, it first asks you to allow it on that server; once allowed, it generates a random password, sends /register, and saves it for next time.
+Auto Login logs you in on join when a password is saved for that server and player and you allowed it on that server — no prompt needed. When no password is saved, it watches for login and register prompts — in chat, in the action bar and on the boss bar — and acts on them: when the server asks you to register, it first asks you to allow it on that server; once allowed, it generates a random password, sends /register, and saves it for next time. On a Friends world it sends nothing: a friend-invite connection has no stable address, so no credential is looked up or sent there.
 
 Manual commands /autologin and /autoregister do the same on demand, and /autologin allow, set, pattern, delay, toggle and status configure it without rebuilding; /al is a short alias for /autologin.
 
@@ -59,14 +59,14 @@ changelog = "Boss-bar prompts are now deduplicated per bar and per connection, s
 
 [[versions]]
 
-version = "1.1.6"
+version = "1.1.7"
 
 published = "2026-11-23"
 
 game = "26.3"
 
-file = "autologin-1.1.6.hmod"
+file = "autologin-1.1.7.hmod"
 
-sha256 = "b65f6618633a36f5ac8a5d460d8ee26ff4423134d51e11f171da397903fac4a2"
+sha256 = "300213a953c6e1e1d7c9815e3eb2ccc592a75cc40894b91355685a96fded5494"
 
-changelog = "Per-server consent: a saved password stays inactive until you allow it on that server with /autologin allow; /autologin set takes the password twice, and /al is a short alias for /autologin. A generated register password is saved only when the /register is actually sent; a register prompt is remembered even if it scrolls away before you allow; consent migrates to the account-UUID key with the password; generated passwords now use the whole configured charset. The one-attempt limit survives a proxy reconfiguration."
+changelog = "Friends worlds: a friend-invite connection has no stable address (the API shows the same 'Friend's world' label for every one), so the mod sends nothing there — no auto-login, no auto-register, no saved passwords looked up. Direct servers are unchanged."
