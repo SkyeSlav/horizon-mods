@@ -59,14 +59,14 @@ changelog = "Boss-bar prompts are now deduplicated per bar and per connection, s
 
 [[versions]]
 
-version = "1.1.4"
+version = "1.1.5"
 
 published = "2026-11-23"
 
 game = "26.3"
 
-file = "autologin-1.1.4.hmod"
+file = "autologin-1.1.5.hmod"
 
-sha256 = "eafb74eb99211eaa02aefe756da51eba294baeb8e8526d67740530b088301ba1"
+sha256 = "f27a6252eacb7ed2d2a60267708aea9010fea1d2642dba24fa0392952021f647"
 
-changelog = "A saved password now logs you in on join, with no prompt needed — the mod no longer waits for a login prompt, so title-only servers log in too. Register still needs a readable prompt."
+changelog = "Passwords are now keyed by server and account UUID, so a saved password is only sent for the exact server and account it was saved for (older name-keyed passwords migrate to the UUID key on join); the promptless login is consumed once per connection, so it cannot repeat and trip a rate limit; a queued login is cancelled when auto-login is switched off, and the toggle and the saved password are rechecked just before sending."
