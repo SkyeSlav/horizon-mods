@@ -59,14 +59,14 @@ changelog = "Boss-bar prompts are now deduplicated per bar and per connection, s
 
 [[versions]]
 
-version = "1.1.7"
+version = "1.1.8"
 
 published = "2026-11-23"
 
 game = "26.3"
 
-file = "autologin-1.1.7.hmod"
+file = "autologin-1.1.8.hmod"
 
-sha256 = "300213a953c6e1e1d7c9815e3eb2ccc592a75cc40894b91355685a96fded5494"
+sha256 = "46955524fe0488719bdca5edab5b7e2345b1d83ed246e13b27a850b31d7902cb"
 
-changelog = "Friends worlds: a friend-invite connection has no stable address (the API shows the same 'Friend's world' label for every one), so the mod sends nothing there — no auto-login, no auto-register, no saved passwords looked up. Direct servers are unchanged."
+changelog = "Packaging fix: the .hmod archive now includes the repository's MIT LICENSE. Nothing else changes — the Friends-worlds fix and the per-server consent model carry over from 1.1.7 and 1.1.6."
