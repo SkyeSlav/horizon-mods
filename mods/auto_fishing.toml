@@ -11,7 +11,7 @@ Horizon Auto Fishing automates fishing input: it sends raw use_item packets to r
 
 Many servers forbid AFK or automated fishing, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first.
 
-Break protection keeps a rod from being used once 5 or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra (up to 5 ticks by default). The opt-in junk filter throws away only the items you list — while it is on, it drops one listed item per tick, even when you are not fishing."""
+Break protection keeps a rod from being used once the protect-at threshold (default 5) or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra (up to 5 ticks by default). The opt-in junk filter throws away only the items you list — while it is on, it discards the whole stack of a listed item, one stack per tick, even when you are not fishing."""
 
 authors = ["SkyeSlav"]
 
@@ -42,3 +42,17 @@ file = "auto-fishing-1.0.3.hmod"
 sha256 = "4e78dbb3a47f919717ad441932de3f5e4e64f594c16036f372404683cd14f184"
 
 changelog = "Ships the MIT LICENSE file inside the .hmod, fixes the version mismatch, and rewrites the description to disclose automated fishing input and the ban risk. Bite detection unchanged from 1.0.2."
+
+[[versions]]
+
+version = "1.0.4"
+
+published = "2026-11-23"
+
+game = "26.3"
+
+file = "auto-fishing-1.0.4.hmod"
+
+sha256 = "64d01716604e5410b1068368cd397cb7eaf4e2a8c8c2205300c4a9b2bca14ef0"
+
+changelog = "Mode is now a named choice on the settings page instead of a bare 1-4 slider (a mode stored by 1.0.3 can read shifted on first launch — check the mode name on the /autofish status line); break protection has a configurable threshold (Protect at, 1-20, default 5); a lost bobber is recast after 750 ticks instead of 1200; Human-like delays is now Random delays everywhere; the junk filter says plainly that it throws whole stacks."
