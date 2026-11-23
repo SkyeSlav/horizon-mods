@@ -45,14 +45,15 @@ changelog = "Ships the MIT LICENSE file inside the .hmod, fixes the version mism
 
 [[versions]]
 
-version = "1.0.4"
+version = "1.0.5"
 
 published = "2026-11-23"
 
 game = "26.3"
 
-file = "auto-fishing-1.0.4.hmod"
+file = "auto-fishing-1.0.5.hmod"
 
-sha256 = "64d01716604e5410b1068368cd397cb7eaf4e2a8c8c2205300c4a9b2bca14ef0"
+sha256 = "4a38d9526789de56bb6ac113c0c5e452eebf8d2bed424da4064bc57d287b2290"
 
-changelog = "Mode is now a named choice on the settings page instead of a bare 1-4 slider (a mode stored by 1.0.3 can read shifted on first launch — check the mode name on the /autofish status line); break protection has a configurable threshold (Protect at, 1-20, default 5); a lost bobber is recast after 750 ticks instead of 1200; Human-like delays is now Random delays everywhere; the junk filter says plainly that it throws whole stacks."
+changelog = "Fixes the mode migration 1.0.4 shipped with: the mode now lives under a new key, and the first load after updating migrates a mode saved by 1.0.3 to it — all four values keep the mode they had, before any automation runs. The old 1-4 slider stays beside the named choice and the two stay in sync. A value stored by 1.0.4 cannot be told apart from a 1.0.3 value, so 1.0.4 users should check the mode name on the /autofish status line once. Everything else is unchanged from 1.0.4."
+
